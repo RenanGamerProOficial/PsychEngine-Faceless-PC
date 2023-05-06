@@ -43,7 +43,12 @@ class LoadingState extends MusicBeatState
 	var funkay:FlxSprite;
 	var loadBar:FlxSprite;
 
-          switch(FlxG.random.int(1, 4))
+	override function create()
+	{
+		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
+		add(bg);
+
+            switch(FlxG.random.int(1, 4))
           {
 
           case 1:
@@ -81,10 +86,6 @@ class LoadingState extends MusicBeatState
 		funkay.scrollFactor.set();
 		funkay.screenCenter();
           }
-	override function create()
-	{
-		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
-		add(bg);
 
 		loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xffff16d2);
 		loadBar.screenCenter(X);
