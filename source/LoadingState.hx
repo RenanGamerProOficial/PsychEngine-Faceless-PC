@@ -42,6 +42,44 @@ class LoadingState extends MusicBeatState
 
 	var funkay:FlxSprite;
 	var loadBar:FlxSprite;
+          switch(FlxG.random.int)
+          {
+
+          case 1:
+                funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/songloadings/LoadingDeadHope.png', IMAGE));
+		funkay.setGraphicSize(0, FlxG.height);
+		funkay.updateHitbox();
+		funkay.antialiasing = ClientPrefs.globalAntialiasing;
+		add(funkay);
+		funkay.scrollFactor.set();
+		funkay.screenCenter();
+
+          case 2:
+                funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/songloadings/LoadingServed.png', IMAGE));
+		funkay.setGraphicSize(0, FlxG.height);
+		funkay.updateHitbox();
+		funkay.antialiasing = ClientPrefs.globalAntialiasing;
+		add(funkay);
+		funkay.scrollFactor.set();
+		funkay.screenCenter();
+
+          case 3:
+                funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/songloadings/LoadingTooSlow.png', IMAGE));
+		funkay.setGraphicSize(0, FlxG.height);
+		funkay.updateHitbox();
+		funkay.antialiasing = ClientPrefs.globalAntialiasing;
+		add(funkay);
+		funkay.scrollFactor.set();
+		funkay.screenCenter();
+          case 4:
+                funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/songloadings/LoadingYouRun.png', IMAGE));
+		funkay.setGraphicSize(0, FlxG.height);
+		funkay.updateHitbox();
+		funkay.antialiasing = ClientPrefs.globalAntialiasing;
+		add(funkay);
+		funkay.scrollFactor.set();
+		funkay.screenCenter();
+          }
 	override function create()
 	{
 		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
